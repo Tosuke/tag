@@ -1,0 +1,13 @@
+{
+	"name": "tag",
+	"authors": [
+		"tosuke"
+	],
+	"description": "An \"tagged value\" implementation for an effective use of std.variant.Algebraic",
+	"copyright": "Copyright © 2017, tosuke",
+	"license": "MIT",
+
+	"targetType": "library",
+	"targetPath": "bin",
+	"workingDirectory": "bin"
+}
