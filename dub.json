@@ -3,7 +3,7 @@
 	"authors": [
 		"tosuke"
 	],
-	"description": "An \"tagged value\" implementation for an effective use of std.variant.Algebraic",
+	"description": "Add \"tagged value\" to D for an effective use of std.variant.Algebraic.",
 	"copyright": "Copyright © 2017, tosuke",
 	"license": "MIT",
 

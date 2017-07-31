@@ -1,4 +1,4 @@
-/// Provides a type wrapper for an efficient use of std.variant.Algebraic.
+/// Add "tagged value" to D for an effective use of std.variant.Algebraic.
 module tag;
 
 /**
