@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<link rel="stylesheet" type="text/css" href="../style.css"/>
+<script src="../highlight.pack.js"></script>
+<title>Tag</title>
+<base href="../"/>
+<script src="search.js"></script>
+<script src="show_hide.js"></script>
+</head>
+<body>
+<div class="main">
+<div class="breadcrumbs">
+<table id="results"></table>
+<a href="index.html" class="home">⌂</a><input type="search" id="search" placeholder="Search" onkeyup="searchSubmit(this.value, event)"/>
+<small><a href=tag.html>tag</a>.</small><span class="highlight">Tag</span>
+</div>
+<div class="sidebar">
+<a href="tag.html#hide-toc" class="hide" id="hide-toc">&#171;</a>
+<a href="tag.html#show-toc" class="show" id="show-toc">&#187;</a>
+<div id="toc-id" class="toc">
+<ul><li><span class=" selected"><a href="tag.html">tag</a></span>
+</li>
+
+</ul>
+</div></div>
+<div class="content">
+<div class="aggregate-symbol"><div class="description"><pre><code>public struct Tag(string tag_, T = <a href="http://dlang.org/type.html#basic-data-types">void</a>)
+</code></pre>
+<div class="section"><h2></h2>
+<p>Wraps <strong>T</strong> with <strong>tag_</strong>.
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section "><h2>Example</h2>
+<div class="section"><h2></h2>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+<pre><code>import std.variant : Algebraic, visit;
+alias Option(T) = Algebraic!(
+  <a href="tag/Tag.html">Tag</a>!("Some", T),
+  <a href="tag/Tag.html">Tag</a>!"None"
+);
+Option!int option;
+
+option = <a href="tag/Tag.html#tag">tag</a>!"Some"(1);
+assert(option.visit!(
+  (<a href="tag/Tag.html">Tag</a>!("Some", int) a) => Option!int(<a href="tag/Tag.html#tag">tag</a>!"Some"(a + 1)),
+  (<a href="tag/Tag.html">Tag</a>!"None" a) => Option!int(a)
+) == <a href="tag/Tag.html#tag">tag</a>!"Some"(2));
+
+option = <a href="tag/Tag.html#tag">tag</a>!"None"();
+assert(option.visit!(
+  (<a href="tag/Tag.html">Tag</a>!("Some", int) a) => Option!int(<a href="tag/Tag.html#tag">tag</a>!"Some"(a + 1)),
+  (<a href="tag/Tag.html">Tag</a>!"None" a) => Option!int(a)
+) == <a href="tag/Tag.html#tag">tag</a>!"None"());
+
+</code></pre>
+
+</div>
+</div><a class="anchor" id="tag"></a><div class="symbol"><div class="description"><pre><code>public string tag
+</code></pre>
+<div class="section"><h2></h2>
+<p>tag
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><a class="anchor" id="value"></a><div class="symbol"><div class="description"><pre><code>public T value
+</code></pre>
+<div class="section"><h2></h2>
+<p>internal value
+</p>
+
+
+</div>
+<div class="section"><h2></h2>
+
+
+</div>
+</div></div><div class="section members"><h2>Variables</h2><table><tr><td><a href="tag/Tag.html#tag">tag</a></td><td><pre><code>string
+</code></pre>
+</td><td></td></tr><tr><td><a href="tag/Tag.html#value">value</a></td><td><pre><code>T
+</code></pre>
+</td><td></td></tr></table>
+</div>
+</div><script>hljs.initHighlightingOnLoad();</script>
+
+</div>
+<footer>
+Generated with <a href="https://github.com/kiith-sa/harbored-mod">harbored-mod</a>
+</footer>
+</div>
+</body>
+</html>
